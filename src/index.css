@@ -1,0 +1,702 @@
+html {
+  height: 100%;
+  --spinner: #1EAAF0;
+  --center: translate(-50%, -50%);
+}
+body {
+  margin: 0;
+  font-family: system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ____________________________________________________________________Navbar */
+.navbar {
+  background-color: #1c1d25;
+  
+}
+.navbar .active {
+  color: #ef744b !important;
+  /* border-bottom: 1px solid #ef744b; */
+  scale: 1.2;
+}
+/* nav ul {
+  position: relative;
+}
+nav ul::after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: calc(100%);
+  left: 0;
+  bottom: 0;
+  background-color: #666;
+  z-index: -1;
+} */
+.nav-link{
+  transition: .3s !important;
+
+}
+.nav-link:hover {
+  /* border-bottom: 1px solid #ef744b; */
+  color: #ef744b !important;
+  transition: .3s !important;
+  scale: 1.2;
+
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link:hover,
+  .navbar .active {
+    scale: 1
+  }
+}
+/* ____________________________________________________________________Navbar */
+
+
+/* ____________________________________________________________________Hero */
+.hero {
+  background-color: #1c1d25;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ____________________________________________________________________Hero */
+
+
+/* ____________________________________________________________________Contact */
+.contact {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.login-box {
+  
+  width: 400px;
+  padding: 40px;
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label,
+.login-box .user-box textarea:focus ~ label,
+.login-box .user-box textarea:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box form button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box button:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+  0 0 25px #03e9f4,
+  0 0 50px #03e9f4,
+  0 0 100px #03e9f4;
+}
+
+.login-box button span {
+  position: absolute;
+  display: block;
+}
+
+.login-box button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+/* ____________________________________________________________________Contact */
+
+
+
+
+/* ____________________________________________________________________Loading */
+.loading {
+  z-index: 9999999;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.center-loading {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--spinner);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: var(--center); 
+}
+.outer-spin, .inner-spin {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+}
+.outer-spin {
+ animation: spin 4s linear infinite;
+}
+.outer-arc, .inner-arc {
+ position: absolute;
+ border-radius: 50%;
+ border: 4px solid;
+}
+.outer-arc {
+ width: 100px;
+ height: 100px;
+}
+.outer-arc_start-a {
+ border-color: transparent transparent transparent var(--spinner);
+ /*NOTE: the order here very much matters!  */
+ transform: var(--center) rotate(65deg); 
+}
+.outer-arc_end-a {
+ border-color: var(--spinner) transparent transparent transparent;
+ transform: var(--center) rotate(45deg);
+}
+.outer-arc_start-b {
+ border-color: transparent transparent transparent var(--spinner); 
+ transform: var(--center) rotate(65deg) scale(-1, -1);
+}
+.outer-arc_end-b {
+ border-color: var(--spinner) transparent transparent transparent;
+ transform: var(--center) rotate(45deg) scale(-1, -1);
+}
+
+.outer-moon-a {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 15px;
+  height: 15px;
+  background: var(--spinner);
+  border-radius: 50%;
+  transform: var(--center) translate(52px, 0); 
+}
+.outer-moon-b {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 15px;
+  height: 15px;
+  background: var(--spinner);
+  border-radius: 50%;
+  transform: var(--center) translate(-52px, 0); 
+}
+.inner-spin {
+ animation: spin 3s linear infinite;
+}
+.inner-arc {
+ width: 62px;
+ height: 62px;
+}
+.inner-arc_start-a {
+ border-color: transparent transparent transparent var(--spinner);
+/*NOTE: the order here very much matters!  */
+ transform: var(--center) rotate(65deg); 
+}
+.inner-arc_end-a {
+ border-color: var(--spinner) transparent transparent transparent;
+ transform: var(--center) rotate(45deg);
+}
+.inner-arc_start-b {
+ border-color: transparent transparent transparent var(--spinner); 
+ transform: var(--center) rotate(65deg) scale(-1, -1);
+}
+.inner-arc_end-b {
+ border-color: var(--spinner) transparent transparent transparent;
+ transform: var(--center) rotate(45deg) scale(-1, -1);
+}
+.inner-moon-a {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 12px;
+  height: 12px;
+  background: var(--spinner);
+  border-radius: 50%;
+  transform: var(--center) translate(33px, 0); 
+}
+.inner-moon-b {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 12px;
+  height: 12px;
+  background: var(--spinner);
+  border-radius: 50%;
+  transform: var(--center) translate(-33px, 0); 
+}
+@keyframes spin { 100% {transform: rotate(360deg); } }
+/* ____________________________________________________________________Loading */
+
+
+/* ____________________________________________________________________Footer */
+footer {
+  background-color: #1c1d25;
+}
+/* ____________________________________________________________________Footer */
+
+/* ____________________________________________________________________Projects */
+#id {
+  text-decoration: none !important ; 
+  color: #ef744b !important ; 
+}
+.project .card {
+  border: none;
+  box-shadow: 5px 5px 20px rgb(197 195 195);
+  transition: .3s;
+}
+.project .card:hover {
+  scale: 1.1;
+  transition: .3s;
+}
+/* ____________________________________________________________________Projects */
+
+
+/* ____________________________________________________________________Skills */
+.skill {
+  border: 1px solid #ef744b93;
+  border-radius: 10px;
+}
+.skills-btn {
+  background-color: #ef744b !important;
+  color: white !important;
+  
+}
+/* ____________________________________________________________________Skills */
+
+
+
+/* ____________________________________________________________________Start Main-Heading */
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  position: relative;
+}
+.main-heading h2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 90px;
+  background-color: #fff;
+}
+.main-heading h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -27px;
+  transform: translateX(-50%);
+  height: 17px;
+  width: 17px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #1a233a;
+}
+.main-heading p {
+  color: #777;
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+}
+/* ____________________________________________________________________End Main-Heading */
+
+/* ____________________________________________________________________Experience */
+.experience{
+  color: #bcd0f7;
+  background: #1A233A;
+}
+
+.timeline {
+  position: relative;
+  background: #272e48;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 5rem;
+  /* margin: 0 auto 1rem auto; */
+  overflow: hidden;
+}
+.timeline:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-right: 2px dashed #4b546f;
+  height: 100%;
+  display: block;
+}
+
+.timeline-row {
+  padding-left: 50%;
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-row .timeline-time {
+  position: absolute;
+  right: 50%;
+  top: 15px;
+  text-align: right;
+  margin-right: 20px;
+  color: #bcd0f7;
+  font-size: 1.5rem;
+}
+.timeline-row .timeline-time small {
+  display: block;
+  font-size: 0.8rem;
+}
+.timeline-row .timeline-content {
+  position: relative;
+  padding: 20px 30px;
+  background: #1a233a;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.timeline-row .timeline-content:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  height: 16px;
+  width: 16px;
+  background: #1a233a;
+}
+.timeline-row .timeline-content:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: -49px;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  z-index: 10;
+  background: #272e48;
+  border: 2px dashed #4b546f;
+}
+.timeline-row .timeline-content h4 {
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 150%;
+}
+.timeline-row .timeline-content p {
+  margin-bottom: 30px;
+  line-height: 150%;
+}
+.timeline-row .timeline-content i {
+  font-size: 1.2rem;
+  line-height: 100%;
+  padding: 15px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background: #272e48;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.timeline-row .timeline-content .thumbs {
+  margin-bottom: 20px;
+  display: flex;
+}
+.timeline-row .timeline-content .thumbs img {
+  margin: 5px;
+  max-width: 60px;
+}
+.timeline-row .timeline-content .badge {
+  color: #ffffff;
+  background: linear-gradient(120deg, #00b5fd 0%, #0047b1 100%);
+}
+.timeline-row:nth-child(even) .timeline-content {
+  margin-left: 40px;
+  text-align: left;
+}
+.timeline-row:nth-child(even) .timeline-content:after {
+  left: -8px;
+  right: initial;
+  border-bottom: 0;
+  border-left: 0;
+  transform: rotate(-135deg);
+}
+.timeline-row:nth-child(even) .timeline-content:before {
+  left: -52px;
+  right: initial;
+}
+.timeline-row:nth-child(odd) {
+  padding-left: 0;
+  padding-right: 50%;
+}
+.timeline-row:nth-child(odd) .timeline-time {
+  right: auto;
+  left: 50%;
+  text-align: left;
+  margin-right: 0;
+  margin-left: 20px;
+}
+.timeline-row:nth-child(odd) .timeline-content {
+  margin-right: 40px;
+}
+.timeline-row:nth-child(odd) .timeline-content:after {
+  right: -8px;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 992px) {
+  .timeline {
+      padding: 15px;
+  }
+  .timeline:after {
+      border: 0;
+  }
+  .timeline .timeline-row:nth-child(odd) {
+      padding: 0;
+  }
+  .timeline .timeline-row:nth-child(odd) .timeline-time {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0 0 10px 0;
+  }
+  .timeline .timeline-row:nth-child(odd) .timeline-content {
+      margin: 0;
+  }
+  .timeline .timeline-row:nth-child(odd) .timeline-content:before {
+      display: none;
+  }
+  .timeline .timeline-row:nth-child(odd) .timeline-content:after {
+      display: none;
+  }
+  .timeline .timeline-row:nth-child(even) {
+      padding: 0;
+  }
+  .timeline .timeline-row:nth-child(even) .timeline-time {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0 0 10px 0;
+      text-align: left;
+  }
+  .timeline .timeline-row:nth-child(even) .timeline-content {
+      margin: 0;
+  }
+  .timeline .timeline-row:nth-child(even) .timeline-content:before {
+      display: none;
+  }
+  .timeline .timeline-row:nth-child(even) .timeline-content:after {
+      display: none;
+  }
+}
+/* ____________________________________________________________________Experience */
+
+
+
+/* ____________________________________________________________________About Page */
+
+.page{
+  background-color: #272e48;
+}
+
+.about-page .image {
+  border: white 1px solid;
+}
+/* ____________________________________________________________________About Page */
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  transition: .3s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: transparent; */
+  
+  transition: .3s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ef744b;
+  height: 40px;
+  border-radius: 8px;
+  transition: .3s;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a83915;
+  transition: .3s;
+}
